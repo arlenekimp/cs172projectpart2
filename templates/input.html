@@ -1,5 +1,33 @@
+<html>
+<head>
+<style>
+body {background-color: #f6f6f2;}
+h1 {text-align: center;color: #388087; font-size: 70px;}
+h3 {text-align: center; font-size: 30px}
+p {text-align: center;}
+div {text-align: center;}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  align: center;
+}
+.button2 {background-color: #6fb3b8;} /* Blue */
+</style>
+</head>
+<body>
+
 <form action="/output" method = "POST">
-    <p>Query <input type = "text" name = "query" /></p>
-    <p>Additional Info <input type = "text" name = "add_info" /></p>
-    <p><input type = "submit" value = "Submit" /></p>
+    <h1> Enter your query below:
+    <h3>Query: <input type = "text" name = "query" /></p>
+    <h3>Additional Info: <input type = "text" name = "add_info" /></p>
+    <div class="centered-container">
+    <button class="button button2">Submit</button>
 </form>
+
