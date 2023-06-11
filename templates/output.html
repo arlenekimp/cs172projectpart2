@@ -1,8 +1,54 @@
+<html>
+<head>
+<style>
+body {
+  background-color: #f6f6f2;
+}
+h1 {text-align: center;color: #388087; font-size: 30px;}
+h2{font-family:fantasy; font-size: 16px; text-align: left}
+h3 {text-align: left; font-size: 50px}
+p {text-align: left; font-size: 14px; color: black}
+div {text-align: center;}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  align: center;
+}
+.button2 {background-color: #6fb3b8;} /* Blue */
+.box-divider {
+  border-top: 2px solid #388087; /* Change the border color (e.g., red) */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+</style>
+</head>
+<body>
+
+
+<h1>Results:<h1>
 {% for item in lucene_output %}
-<h2> Score: {{item['score']}}</h2>
-<h2> Passage: {{item['text']}}</h2>
+<div class = "box-divider">
+<h2> Score: </h2> <p>{{item['score']}}</p>
+<h2> Username: </h2> <p>{{item['username']}}</p>
+<h2> Title: </h2> <p>{{item['title']}}</p>
+<h2> Upvotes: </h2> <p>{{item['upvotes']}}</p>
+<h2> Body: </h2> <p>{{item['text']}}</p>
+</div>
 {% endfor %}
 
+
 <form action="/input" method = "POST">
-    <p><input type = "submit" value = "Search Again" /></p>
+    <div class="centered-container">
+            <button class="button button2">Search Again</button>
+        </div>
 </form>
