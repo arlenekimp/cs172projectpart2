@@ -89,7 +89,7 @@ def retrieve(storedir, query):
     topDocs = searcher.search(parsed_query, 10).scoreDocs
     topkdocs = []
     for hit in topDocs:
-        print(hit.score)
+        #print(hit.score)
         doc = searcher.doc(hit.doc)
         topkdocs.append({
             "score": hit.score,
